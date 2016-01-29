@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Peer Angular Directives</title>
+    <link href="assets/styles/styles.css" rel="stylesheet"/>
+    <script src="vendors/angular/angular.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+
+</head>
+<body ng-controller="MainController">
+    <h1>Peer Angular Directives</h1>
+        {{hello}}
+
+    <div>
+        <input ng-keypress="count = count + 1" ng-init="count = 0" ng-class="{ 'manyKeypresses': count > 10 }"/><!--ng-class applies manyKeypresses class to input if the expression after the : is true-->
+        <h3>key press count: {{count}}</h3>
+    </div>
+    <div ng-if= "count > 10" >
+        <p>STOP TYPING</p>
+        <button ng-focus="countTen()">Click it!</button>
+        <p class = "counter" ng-repeat="number in newCounter" ng-class-odd="{ 'checkBox': checked }">{{number}}</p>
+        <br><label>Check the box:</label><input type="checkbox" ng-model="checked"/>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.manyKeypresses {
+    background-color: red;
+}
+
+.counter {
+    display: inline-block;
+    margin: 10px;
+}
+
+.checkBox {
+    background-color: yellow;
+}
+
